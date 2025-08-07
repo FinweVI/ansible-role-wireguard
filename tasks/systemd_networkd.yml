@@ -16,5 +16,6 @@
     owner: "systemd-network"
     group: "root"
   notify: Restart systemd-networkd
+  when: "'addresses' in profile and profile.addresses"
 
 # vim: set ts=2 sw=2:
